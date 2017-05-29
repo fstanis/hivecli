@@ -17,6 +17,10 @@ devices I personally own. Most notably, smart heating is not supported.
 
 Contributions are welcome.
 
+## Download
+
+You can find the latest version of the binary in the [releases section](https://github.com/fstanis/hivecli/releases).
+
 ## Usage
 
 ```
