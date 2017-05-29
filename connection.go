@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/fstanis/go-hive/hive"
 	"github.com/fstanis/hivecli/config"
 )
@@ -28,7 +26,6 @@ func restoreToken(conf *config.Config) (*hive.Client, error) {
 	client.EndpointURL = conf.EndpointURL
 	err := client.RefreshDevices()
 	if err != nil {
-		fmt.Println(err)
 		return nil, err
 	}
 	return client, nil
@@ -43,7 +40,6 @@ func restoreToken(conf *config.Config) (*hive.Client, error) {
 func connect(conf *config.Config) (*hive.Client, error) {
 	creds, err := conf.LoadCredentials()
 	if err != nil {
-		fmt.Println("No valid credentials found, please input them now.\n")
 		creds = askCredentials()
 	}
 

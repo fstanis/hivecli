@@ -38,6 +38,8 @@ func ask(message string, password bool) (result string) {
 func askCredentials() *hive.Credentials {
 	var creds hive.Credentials
 
+	fmt.Println("No valid credentials found, please input them now.\n")
+
 	for creds.Username == "" {
 		creds.Username = ask("Enter username: ", false)
 		if creds.Username == "" {
